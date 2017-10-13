@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <link rel="stylesheet" href="build/css/vendor.css">
     <link href="build/css/vendor.css" rel="stylesheet" type="text/css">
@@ -12,7 +13,10 @@
   <body>
     <div class = "container">
       <h1>Space Calculator</h1>
+
       <h3>The current local time is: <span id="time"></span></h3>
+
+      <h3>Enter Age and Birthdate</h3>
       <div class="form-group">
         <label for="ageEntered">Enter your Age:</label>
         <input id="ageEntered" class="form-control" type="number" required>
@@ -21,9 +25,21 @@
         <label for="dateEntered">Enter your Birth Date:</label>
         <input id="dateEntered" class="form-control" type="date" required>
       </div>
-      <br />
+
+      <h3>Select Region</h3>
+      <select class="form-control" id="region" required>
+        <option value="" selected disabled>Select Earth Region:</option>
+        <option value="America">North America</option>
+        <option value="Africa">Africa</option>
+        <option value="Asia">East Asia &amp; Pacific</option>
+        <option value="Europe">Europe &amp; Central Asia</option>
+        <option value="Latin">Latin America &amp; the Caribbean</option>
+        <option value="Middle">Middle East &amp; North Africa</option>
+        <option value="South">South Asia</option>
+      </select>
+
       <button type="submit" class="btn-success">Submit</button>
-      <br />
+
       <h4>Your age on Mercury: <span id="ageMercury"></span></h4>
       <h4>Your time until death on Mercury is <span id="expireMercury"></span> years.</h4>
       <h4>Your age on Venus: <span id="ageVenus"></span></h4>
