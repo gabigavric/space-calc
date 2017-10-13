@@ -10,23 +10,28 @@
   </head
 
   <body>
-    <h3>Well look at the time! </h3>
-    <h3 id="time"></h3>
-    <br>
-    <br>
-    <div class="container">
-    <h1>Make a new journal entry</h1>
-    <form id="journal">
-      <label for="title">Entry Title:</label>
-      <input id="title" type="text">
-      <label for="entry">Entry Text:</label>
-      <input id="entry" type="text">
-      <button class="btn btn-success" type="submit">Submit</button>
-    </form>
-
-    Journal Entries:
-    <div id="entries">
+    <div class = "container">
+      <div class="form-group">
+        <label for="ageEntered">Enter your Age:</label>
+        <input id="ageEntered" class="form-control" type="number" required>
+      </div>
+      <div class="form-group">
+        <label for="dateEntered">Enter your Birth Date:</label>
+        <input id="dateEntered" class="form-control" type="date" required>
+      </div>
+      <br />
+      <button type="submit" class="btn-success">Submit</button>
+      <br />
+      <h4>Your age on Mercury: <span id="ageMercury"></span></h4>
+      <h4>Your time until death on Mercury is <span id="expireMercury"></span> years.</h4>
+      <h4>Your age on Venus: <span id="ageVenus"></span></h4>
+      <h4>Your time until death on Venus is <span id="expireVenus"></span> years.</h4>
+      <h4>Your age on Earth: <span id="ageEarth"></span></h4>
+      <h4>Your time until death on Earth is <span id="expireEarth"></span> years.</h4>
+      <h4>Your age on Mars: <span id="ageMars"></span></h4>
+      <h4>Your time until death on Mars is <span id="expireMars"></span> years.</h4>
+      <h4>Your age on Jupiter: <span id="ageJupiter"></span></h4>
+      <h4>Your time until death on Jupiter is <span id="expireJupiter"></span> years.</h4>
     </div>
-</div>
   </body>
 </html>
