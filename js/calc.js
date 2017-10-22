@@ -27,4 +27,11 @@ export class Calculator {
      return age;
    }
 
+   venus(secondsAge) {
+     const earth = 31536000;
+     let input = secondsAge / (earth * .62);
+     let age = parseFloat(input.toFixed(2));
+     return age;
+   }
+
 }
