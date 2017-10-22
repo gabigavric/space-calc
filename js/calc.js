@@ -41,4 +41,11 @@ export class Calculator {
      return age;
    }
 
+   jupiter(secondsAge) {
+     const earth = 31536000;
+     let input = secondsAge / (earth * 11.86);
+     let age = parseFloat(input.toFixed(2));
+     return age;
+   }
+
 }
