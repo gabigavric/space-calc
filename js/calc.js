@@ -1,22 +1,23 @@
 export class Calculator {
 
-  constructor(age, birthday, currentDate, region) {
-    this.age = age;
+  constructor(birthday, currentDate) {
     this.birthday = birthday;
-    this.curretDate = currentDate;
-    this.region = region:
+    this.currentDate = currentDate;
+    this.expectancy = 0;
   }
 
-  checkAgeInSeconds(age) {
-    const timeCount = 31536000;
-    let ageInSeconds = age * secondsInYear;
-    return ageInSeconds;
+  constructorB(birthday, currentDate, region) {
+    super.birthday = birthday;
+    super.currentDate = currentDate;
+    this.region = region;
   }
 
-  findAge(date){
-    let currentDate = this.currendDate.getTime(); //10-13-17
-    let birthday = this.birthday.getTime(); // 12-25-1994
-    let yearsOld = currentDate.getFullYear() - birthday.getFullYear(); //2017-1994
-    let difference = Math.floor(yearsOld / 1000);
-    return difference;
+  checkAgeInSeconds() {
+    let currentDateSeconds= this.currentDate.getTime();
+    let birthdaySeconds = this.birthday.getTime();
+    let difference = currentDateSeconds - birthdaySeconds;
+    let secondsAge = Math.floor(difference / 1000);
+    return secondsAge;
   }
+
+}
