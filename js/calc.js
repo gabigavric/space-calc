@@ -34,4 +34,11 @@ export class Calculator {
      return age;
    }
 
+   mars(secondsAge) {
+     const earth = 31536000;
+     let input = secondsAge / (earth * 1.88);
+     let age = parseFloat(input.toFixed(2));
+     return age;
+   }
+
 }

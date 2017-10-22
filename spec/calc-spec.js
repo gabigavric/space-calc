@@ -26,4 +26,10 @@ describe('Calculator', function() {
     expect(age.venus(seconds)).toEqual(36.84)
   });
 
+  it('should test conversion of age on Mars', function() {
+    let age = new Calculator(new Date("1994-12-25"), new Date("2017-10-22"))
+    let seconds = age.checkAgeInSeconds(age.birthday, age.currentDate)
+    expect(age.mars(seconds)).toEqual(12.15)
+  });
+
 });
