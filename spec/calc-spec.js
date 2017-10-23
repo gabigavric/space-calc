@@ -33,4 +33,9 @@ describe('Calculator', function() {
     expect(calc.jupiter(seconds)).toEqual(1.93)
   });
 
+  it('should test conversion of age on Earth', function() {
+    let seconds = calc.checkAgeInSeconds(calc.birthday, calc.currentDate)
+    expect(calc.earth(seconds)).toEqual(22.84)
+  });
+
 });
