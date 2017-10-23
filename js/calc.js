@@ -6,10 +6,10 @@ export class Calculator {
     this.expectancy = 0;
   }
 
-  constructorB(birthday, currentDate, region) {
+  constructorB(birthday, currentDate, continent) {
     super.birthday = birthday;
     super.currentDate = currentDate;
-    this.region = region;
+    this.region = continent;
   }
 
   checkAgeInSeconds() {
@@ -48,4 +48,24 @@ export class Calculator {
      return age;
    }
 
-}
+   continent() {
+   let continentAge = 0;
+   age = number(document.getElementById("age").value);
+   if(continent === "northAmerica") {
+     continentAge = 75;
+   } else if (continent === "southAmerica") {
+     continentAge = 65;
+   } else if (continent === "europe") {
+     continentAge = 80;
+   } else if (continent === "africa") {
+     continentAge = 60;
+   } else if (continent === "asia") {
+     continentAge = 85;
+   } else if (continent === "australia") {
+     continentAge = 75;
+   } else {
+     continentAge = 80;
+   } return continentAge;
+
+   }
+  }

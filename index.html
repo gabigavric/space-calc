@@ -12,44 +12,34 @@
 
   <body>
     <div class = "container">
+
       <h1>Space Calculator</h1>
+        <form id="calculatorForm">
 
-      <h3>The current local time is: <span id="time"></span></h3>
+          <div class="form-group">
+            <label for="age">Enter your Age:</label>
+            <input id="age" class="form-control" type="number" required>
+          </div>
+          <div class="form-group">
+            <label for="birthday">Enter your Birth Date:</label>
+            <input id="birthday" class="form-control" type="date" required>
+          </div>
 
-      <h3>Input Info:</h3>
-      <div class="form-group">
-        <label for="age">Enter your Age:</label>
-        <input id="age" class="form-control" type="number" required>
-      </div>
-      <div class="form-group">
-        <label for="birthday">Enter your Birth Date:</label>
-        <input id="birthday" class="form-control" type="date" required>
-      </div>
+          <h3>Select Continent:</h3>
+          <select class="form-control" id="region" required>
+            <option value="" selected disabled>Continent:</option>
+            <option value="northAmerica">North America</option>
+            <option value="southAmerica">South America</option>
+            <option value="europe">Europe</option>
+            <option value="africa">Africa</option>
+            <option value="asia">Asia</option>
+            <option value="australia">Australia</option>
+          </select>
 
-      <h3>Select Region:</h3>
-      <select class="form-control" id="region" required>
-        <option value="" selected disabled>Region:</option>
-        <option value="America">North America</option>
-        <option value="Africa">Africa</option>
-        <option value="Asia">East Asia &amp; Pacific</option>
-        <option value="Europe">Europe &amp; Central Asia</option>
-        <option value="Latin">Latin America &amp; the Caribbean</option>
-        <option value="Middle">Middle East &amp; North Africa</option>
-        <option value="South">South Asia</option>
-      </select>
+          <button type="submit" class="btn-success">Submit</button>
+      </form>
 
-      <button type="submit" class="btn-success">Submit</button>
-
-      <h4>Your age on Mercury: <span id="ageMercury"></span></h4>
-      <h4>Your time until death on Mercury is <span id="expireMercury"></span> years.</h4>
-      <h4>Your age on Venus: <span id="ageVenus"></span></h4>
-      <h4>Your time until death on Venus is <span id="expireVenus"></span> years.</h4>
-      <h4>Your age on Earth: <span id="ageEarth"></span></h4>
-      <h4>Your time until death on Earth is <span id="expireEarth"></span> years.</h4>
-      <h4>Your age on Mars: <span id="ageMars"></span></h4>
-      <h4>Your time until death on Mars is <span id="expireMars"></span> years.</h4>
-      <h4>Your age on Jupiter: <span id="ageJupiter"></span></h4>
-      <h4>Your time until death on Jupiter is <span id="expireJupiter"></span> years.</h4>
+      <div id = "output"></div>
     </div>
   </body>
 </html>
