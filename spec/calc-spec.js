@@ -6,7 +6,7 @@ describe('Calculator', function() {
   let calc;
 
   beforeEach(function() {
-      calc = new Calculator(new Date("1994-12-25"), new Date("2017-10-22"));
+      calc = new Calculator(new Date("1994-12-25"), new Date("2017-10-22"), "northAmerica");
   });
 
   it ('should test conversion of age into seconds', function() {
@@ -38,4 +38,7 @@ describe('Calculator', function() {
     expect(calc.earth(seconds)).toEqual(22.84)
   });
 
+  it('should test life expectancy based on continent', function() {
+    expect(calc.getLifeExpectancy()).toEqual(75*(365*24*60*60))
+  });
 });
