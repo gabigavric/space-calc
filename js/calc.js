@@ -1,5 +1,4 @@
 export class Calculator {
-
   constructor(birthday, currentDate) {
     this.birthday = birthday;
     this.currentDate = currentDate;
@@ -9,7 +8,7 @@ export class Calculator {
   constructorB(birthday, currentDate, continent) {
     super.birthday = birthday;
     super.currentDate = currentDate;
-    this.region = continent;
+    this.continent = continent;
   }
 
   checkAgeInSeconds() {

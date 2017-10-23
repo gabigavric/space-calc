@@ -1,9 +1,8 @@
 import {Calculator} from './../js/calc.js';
-
   $(function() {
   $("#calculatorForm").submit(function(event) {
     event.preventDefault();
-
+  
     let birthday = new Date($('#birthday').val());
     let currentDate = new Date();
     let continent = $("#continent").val();

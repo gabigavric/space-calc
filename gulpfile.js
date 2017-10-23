@@ -21,7 +21,6 @@ var lib = require('bower-files')({
 });
 var browserSync = require('browser-sync').create();
 
-
 gulp.task('jsBrowserify', ['concatInterface'], function() {
   return browserify({ entries: ['./tmp/allConcat.js']})
     .transform(babelify.configure({
@@ -33,11 +32,10 @@ gulp.task('jsBrowserify', ['concatInterface'], function() {
 });
 
 gulp.task('concatInterface', function() {
-  return gulp.src(['./JS/calc.js'])
+  return gulp.src(['./js/*-interface.js'])
     .pipe(concat('allConcat.js'))
     .pipe(gulp.dest('./tmp'));
 });
-
 
 gulp.task("minifyScripts", ["jsBrowserify"], function(){
   return gulp.src("./build/js/app.js")
@@ -96,12 +94,4 @@ gulp.task('jsBuild', ['jsBrowserify', 'jshint'], function(){
 
 gulp.task('bowerBuild', ['bower'], function(){
   browserSync.reload();
-});
-
-gulp.task("build", function(){
-  if (buildProduction) {
-    gulp.start('minifyScripts');
-  } else {
-    gulp.start('jsBrowserify');
-  }
 });
